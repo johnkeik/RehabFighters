@@ -1,0 +1,23 @@
+.question-item {
+  list-style: none;
+  width: 100%;
+  cursor: grab;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px -1px rgba(255, 255, 255, 0.5);
+
+  .content {
+    padding: 0 16px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.4s;
+    background-color: white;
+    opacity: 0.9;
+
+    &.visible {
+      max-height: 400px;
+      padding: 10px 16px 16px;
+    }
+  }
+}

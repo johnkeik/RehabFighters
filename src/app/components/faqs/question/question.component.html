@@ -1,0 +1,12 @@
+<li class="question-item bg-accent" (click)="toggleDescription()">
+  <div class="flex flex-row p-4 items-center gap-3">
+    <img
+      src="../../../../assets/images/{{ buttonImage }}"
+      class="w-[15px] h-[15px]"
+    />
+    <h1 class="text-white font-gothamBlack italic text-sm">{{ title }}</h1>
+  </div>
+  <div class="content rounded-b-lg" [class.visible]="showDescription">
+    <ng-content></ng-content>
+  </div>
+</li>
