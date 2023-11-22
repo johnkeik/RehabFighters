@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center pt-[200px] gap-16 p-5">
+  <h1 class="font-gothamBlack italic text-base text-center max-w-[500px]">
+    Στο Rehab Fighters ειδικευόμαστε στην αποκατάσταση σε ένα ευρύ φάσμα
+    μυοσκελετικών τραυματισμών που εμφανίζονται συχνά στα μαχητικά αθλήματα.
+  </h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
+    <app-card
+      *ngFor="let category of categories"
+      [title]="category.title"
+      [subtitle]="category.subtitle"
+      [injuries]="category.injuries"
+    ></app-card>
+  </div>
+</div>

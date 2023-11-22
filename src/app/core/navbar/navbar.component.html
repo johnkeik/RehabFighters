@@ -1,0 +1,21 @@
+<div class="fixed w-full overflow-visible z-[9999]">
+  <img
+    src="../../../assets/images/{{ buttonImage }}"
+    class="absolute right-10 top-10 z-50 w-[30px] h-[30px] sm:hidden"
+    (click)="toggleNavbar()"
+  />
+
+  <app-navbar-content
+    class="z-50 absolute top-[150px] left-0 right-0 w-[250px] mr-auto ml-auto sm:top-[50px] sm:w-[680px]"
+    [ngClass]="{ hidden: !isNavbarVisible }"
+    (onToggleNavbar)="onToggleNavbar($event)"
+  />
+
+  <div
+    class="absolute min-h-screen w-full bg-transparent z-10 sm:hidden"
+    [ngClass]="{ hidden: !isNavbarVisible }"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)"
+    (click)="toggleNavbar()"
+  ></div>
+</div>

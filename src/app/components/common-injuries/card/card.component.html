@@ -1,0 +1,31 @@
+<div class="flex justify-end items-end w-[300px] h-[175px]">
+  <div
+    class="w-[300px] h-[150px] bg-white rounded-lg relative flex justify-start items-center p-3"
+  >
+    <div
+      class="absolute h-[25px] -top-[25px] left-[15px] flex items-center px-4 bg-accent rounded-t-md"
+    >
+      <h1 class="font-gothamBlack text-xs italic">
+        {{ title }}
+      </h1>
+    </div>
+
+    <ul>
+      <li *ngIf="subtitle">
+        <h1 class="text-black font-gothamLight text-xs italic">
+          {{ subtitle }}
+        </h1>
+      </li>
+
+      <li
+        class="flex flex-row items-center gap-3"
+        *ngFor="let injury of injuries"
+      >
+        <img src="../../../../assets/images/bullet.png" class="h-[15px]" />
+        <h1 class="text-black font-gothamLight text-xs">
+          {{ injury }}
+        </h1>
+      </li>
+    </ul>
+  </div>
+</div>

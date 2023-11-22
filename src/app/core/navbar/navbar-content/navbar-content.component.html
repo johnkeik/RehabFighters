@@ -1,0 +1,61 @@
+<div
+  class="w-full flex flex-col justify-center items-center bg-white bg-opacity-90 rounded-lg p-10 sm:flex-row sm:px-10 sm:py-4 sm:gap-3 sm:h-[60px]"
+>
+  <img src="../../../assets/images/LOGOMARK-BLACK.png" class="h-[50px]" />
+  <a
+    routerLinkActive=" active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="home"
+    class="text-black text-xs pb-1 sm:pb-0"
+    (click)="closeNavbar()"
+    >ΑΡΧΙΚΗ</a
+  >
+  <div class="hidden sm:flex h-[16px] w-[1px] bg-black"></div>
+  <a
+    routerLink="about"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-black text-xs pb-1 sm:pb-0"
+    (click)="closeNavbar()"
+    >ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a
+  >
+  <div class="hidden sm:flex h-[16px] w-[1px] bg-black"></div>
+  <a
+    routerLink="commonInjuries"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-black text-xs pb-1 sm:pb-0"
+    (click)="closeNavbar()"
+    >ΣΥΧΝΕΣ ΠΑΘΗΣΕΙΣ</a
+  >
+  <div class="hidden sm:flex h-[16px] w-[1px] bg-black"></div>
+
+  <a
+    routerLink="faqs"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-black text-xs pb-1 sm:pb-0"
+    (click)="closeNavbar()"
+    >FAQ's</a
+  >
+  <div class="hidden sm:flex h-[16px] w-[1px] bg-black"></div>
+
+  <a
+    routerLink="blog"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-black text-xs pb-1 sm:pb-0"
+    (click)="closeNavbar()"
+    >BLOG</a
+  >
+  <div class="hidden sm:flex h-[16px] w-[1px] bg-black"></div>
+
+  <a
+    routerLink="contact"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-black text-xs"
+    (click)="closeNavbar()"
+    >ΕΠΙΚΟΙΝΩΝΙΑ</a
+  >
+</div>

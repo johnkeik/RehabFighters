@@ -1,0 +1,14 @@
+.custom-list {
+  list-style-type: none; /* Remove default list bullets */
+  padding-left: 0; /* Remove default left padding */
+}
+
+.custom-list li {
+  color: black;
+  padding-left: 20px; /* Add padding to make space for the custom image */
+  list-style-image: url("../../../../assets/images/bullet.png"); /* Set your custom image as the list-style-image */
+  width: 20px; /* Set the custom width for your image */
+  height: 20px;
+  margin-bottom: 8px; /* Optional: Add space between list items */
+  max-height: 25px;
+}

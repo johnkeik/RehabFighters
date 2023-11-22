@@ -1,0 +1,74 @@
+<div class="flex flex-col items-center gap-5 pt-5">
+  <h1 class="font-gothamBlack italic text-base">Αξιολογήσεις ασθενών!</h1>
+  <div
+    class="flex flex-row w-[340px] md:w-[600px] gap-[10px] relative justify-center items-center"
+  >
+    <img
+      src="../../../../assets/images/quotes-left.png"
+      class="w-[40px] h-[30px] absolute -left-[15px] -top-[15px]"
+    />
+    <img
+      src="../../../../assets/images/quotes-right.png"
+      class="w-[40px] h-[30px] absolute -right-[15px] -bottom-[15px]"
+    />
+    <img
+      src="../../../../assets/images/arrow-left.svg"
+      class="w-[20px] h-[20px]"
+      (click)="scrollLeft()"
+    />
+    <div class="media-scroller w-[280px] md:w-[540px]" #mediaScroller>
+      <div
+        class="w-[260px] h-[300px] bg-white p-8 flex flex-col gap-5 justify-center items-center rounded-xl"
+      >
+        <div class="h-[200px] pb-3 overflow-x-auto">
+          <p class="text-black text-xs font-gothamLight">
+            Ο Άγγελος με βοήθησε πολύ κατά τη διάρκεια του τραυματισμού με
+            θεραπευτικές τεχνικές για να μην πονάω αλλά το πιο σημαντικό για
+            μένα είναι οι ειδικές ασκήσεις που μου έδωσε για το άθλημά μου. Αυτό
+            ήταν καθοριστικό ώστε πριν την προπόνηση να δουλεύω ένα ασκησιολόγιο
+            ειδικά για μένα και τις ανάγκες του αθλήματός μου.<br />
+            Με τον Άγγελο συνεργάζομαι χρόνια και αυτό που μπορώ να πω με
+            σιγουριά είναι ότι έχει βαθιά γνώση της επιστήμης του , νοιάζεται
+            πραγματικά και θέλει να βοηθήσει τον ασθενή.
+          </p>
+        </div>
+        <div class="w-full flex flex-row gap-2 items-end justify-between">
+          <h1 class="text-black text-xs font-gothamBlack italic">
+            Καπηρέλης Βασίλης<br />
+            Bjj Black Belt, MMA
+          </h1>
+          <div class="h-[50px] w-[50px] bg-red-400"></div>
+        </div>
+      </div>
+      <div
+        class="w-[260px] h-[300px] bg-white p-8 flex flex-col gap-5 justify-center items-center rounded-xl"
+      >
+        <div class="h-[200px] pb-3 overflow-x-auto">
+          <p class="text-black text-xs font-gothamLight">
+            Είχα ρήξη έξω μηνίσκου στο γόνατο. Η θεραπεία έγινε με ολοκληρωμένο
+            πλάνο αποκατάστασης και συχνή παρακολούθηση της προόδου. Με βοήθησε
+            στην μείωση του πόνου, τη βελτίωση της κινητικότητας και στο να
+            επιστρέψω γρήγορα στις προπονήσεις αλλά ταυτόχρονα με βοήθησε στο να
+            αποκτήσω καλύτερη αντίληψη της προπόνησης και τη σημασία της σωστής
+            διαχείρισης του όγκου των προπονησεων το οποίο μακροπρόθεσμα έφερε
+            σημαντική βελτίωση και πρόοδο. Μου άρεσε που το πρόγραμμα ήταν
+            &quot;στα μέτρα&quot; μου καθώς και το ότι οι ασκήσεις ήταν
+            ευχάριστες αλλά και αποτελεσματικές!
+          </p>
+        </div>
+        <div class="w-full flex flex-row gap-2 items-end justify-between">
+          <h1 class="text-black text-xs font-gothamBlack italic">
+            Έλενα Αιβαλιώτη<br />
+            Bjj Blue Belt
+          </h1>
+          <div class="h-[50px] w-[50px] bg-red-400"></div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="../../../../assets/images/arrow-right.svg"
+      class="w-[20px] h-[20px]"
+      (click)="scrollRight()"
+    />
+  </div>
+</div>
