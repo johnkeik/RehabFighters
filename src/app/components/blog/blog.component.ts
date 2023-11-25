@@ -14,27 +14,24 @@ export class BlogComponent {
   expanded3 = false;
 
   toggle1() {
-    console.log('here');
     this.expanded1 = !this.expanded1;
     this.expanded2 = false;
     this.expanded3 = false;
 
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
   toggle2() {
-    console.log('here');
     this.expanded2 = !this.expanded2;
     this.expanded1 = false;
     this.expanded3 = false;
 
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
   toggle3() {
-    console.log('here');
     this.expanded3 = !this.expanded3;
     this.expanded1 = false;
     this.expanded2 = false;
 
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 }
