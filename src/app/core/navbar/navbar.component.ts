@@ -1,4 +1,11 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Output,
+  Renderer2,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   NavbarContentComponent,
@@ -17,7 +24,7 @@ export class NavbarComponent {
   get buttonImage(): string {
     return this.isNavbarVisible ? 'close.svg' : 'hamburger.svg';
   }
-
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
   private lastScrollTop = 0;
 
   @HostListener('window:scroll', [])
@@ -41,26 +48,17 @@ export class NavbarComponent {
     this.lastScrollTop = currentScrollTop;
   }
 
-  private touchStartX: number;
-
-  onTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.touches[0].clientX;
-    event.preventDefault();
-  }
-
-  onTouchEnd(event: TouchEvent): void {
-    const touchEndX = event.changedTouches[0].clientX;
-    const touchThreshold = 10; // Adjust this threshold as needed
-
-    if (Math.abs(touchEndX - this.touchStartX) < touchThreshold) {
-      // It's a tap, trigger the desired action
-      this.toggleNavbar();
-    }
-  }
   toggleNavbar() {
     this.onToggleNavbar({ isNavbarVisible: !this.isNavbarVisible });
   }
   onToggleNavbar(data: NavbarToggle): void {
     this.isNavbarVisible = data.isNavbarVisible;
+    if (window.innerWidth <= 700) {
+      this.renderer.setStyle(
+        document.body,
+        'overflow',
+        this.isNavbarVisible ? 'hidden' : ''
+      );
+    }
   }
 }
