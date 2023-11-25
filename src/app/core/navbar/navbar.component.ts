@@ -28,7 +28,7 @@ export class NavbarComponent {
       document.body.scrollTop ||
       0;
 
-    if (window.innerWidth >= 640) {
+    if (window.innerWidth >= 700) {
       if (currentScrollTop > this.lastScrollTop) {
         // Scrolling down
         this.isNavbarVisible = false;

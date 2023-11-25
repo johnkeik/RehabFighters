@@ -27,7 +27,7 @@ export class NavbarContentComponent {
 
   private updateNavbarVisibility(): void {
     // Set isNavbarVisible to true when the screen width is greater than 640px
-    this.isNavbarVisible = window.innerWidth > 640;
+    this.isNavbarVisible = window.innerWidth > 700;
     this.onToggleNavbar.emit({ isNavbarVisible: this.isNavbarVisible });
   }
 
@@ -37,7 +37,7 @@ export class NavbarContentComponent {
   }
 
   closeNavbar() {
-    if (window.innerWidth < 640) {
+    if (window.innerWidth < 700) {
       this.isNavbarVisible = false;
       this.onToggleNavbar.emit({ isNavbarVisible: this.isNavbarVisible });
     }

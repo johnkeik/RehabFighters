@@ -8,6 +8,9 @@ module.exports = {
         gothamBlack: ["GothamGRBlack", "sans-serif"],
         gothamLight: ["GothamGRLight", "sans-serif"],
       },
+      screens: {
+        sm: "700px",
+      },
       colors: {
         accent: "#A93A3B",
         accentContrast: "#ffffff",
