@@ -1,3 +1,224 @@
-<div class="flex flex-col h-[60vh] justify-center">
-  <h1 class="font-gothamBlack italic text-2xl text-center">Coming soon...</h1>
+<div class="flex flex-col justify-start gap-10">
+  <h1
+    class="font-gothamBlack italic text-lg text-center max-w-[300px] sm:max-w-[500px]"
+  >
+    News and updates!
+  </h1>
+  <!-- <h1 class="font-gothamBlack italic text-2xl text-center">Coming soon...</h1> -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 grid-container"
+  >
+    <div
+      class="bg-white article rounded-lg flex flex-col overflow-hidden"
+      [ngClass]="
+        expanded1
+          ? 'sm:col-span-2 lg:col-span-3 max-h-[2000px] row-start-1'
+          : 'max-h-[650px] max-w-[350px]'
+      "
+    >
+      <div
+        class="w-full flex flex-col justify-center items-center"
+        [ngClass]="{ 'pt-0 sm:pt-10': expanded1 }"
+      >
+        <img
+          src="../../../../assets/images/blog-article-1.png"
+          class="max-w-[350px] w-full"
+          [ngClass]="{ 'sm:rounded-lg': expanded1 }"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-1 flex-grow items-centertext-center p-3 text-center"
+        [ngClass]="
+          expanded1 ? 'justify-start px-3 sm:px-16 py-10' : 'justify-center'
+        "
+      >
+        <h1 class="font-gothamBlack text-base text-black flex-grow">
+          Πνιγμός vs στραγγαλισμός.<br />
+          Ποια η διαφορά;
+        </h1>
+        <div
+          class="overflow-hidden"
+          [ngClass]="expanded1 ? 'h-auto' : 'h-[100px]'"
+        >
+          <p class="text-black font-gothamLight text-sm">
+            Μία από τις σημαντικότερες ικανότητες στο bjj είναι να μπορείς να
+            «κοιμήσεις» τον αντίπαλό σου. Yπάρχει μία διαφορά μεταξύ του
+            στραγγαλισμού και του πνιγμού. Πολλές φορές όμως αυτοί οι δύο όροι
+            συγχέονται.
+            <br /><br />Στραγγαλισμός ορίζεται η κατάσταση κατά την οποία
+            διακόπτεται η αιμάτωση προς τον εγκέφαλο. Πνιγμός ορίζεται η
+            κατάσταση κατά την οποία υπάρχει μεγάλη δυσκολία αναπνοής λόγω
+            παρεμπόδισης της αναπνευστικής οδού. <br /><br />
+            Πώς όμως λειτουργούν οι στραγγαλισμοί που εφαρμόζονται συχνότερα;
+            <br /><br />
+            Μία μελέτη εξέτασε τη φυσιολογία των στραγγαλισμών. Τα αγγεία στα
+            οποία στοχεύει αυτή η τεχνική είναι οι καρωτιδικές αρτηρίες. Για την
+            απώλεια των αισθήσεων χρειάζεται να συμπιεστούν οι καρωτιδικές
+            αρτηρίες έτσι ώστε να μειωθεί η αιματική ροή προς τον εγκέφαλο. Όταν
+            κάποιος «πέσει για ύπνο» και υποστεί εγκεφαλική υποξία σημαίνει ότι
+            η ταχύτητα αιμάτωσης του εγκεφάλου έχει πέσει κάτω από το 50% και
+            στις δύο καρωτιδικές αρτηρίες δεξιά και αριστερά. Η συμπιεστική
+            δύναμη η οποία απαιτήθηκε για να μειωθεί η αιματική ροή κάτω από το
+            50% στις καρωτίδες αρτηρίες ήταν τουλάχιστον 100mmHg.
+            <br /><br />
+            Από την ίδια έρευνα επίσης προέκυψε ότι αν εφαρμόζονταν μεγαλύτερη
+            δύναμη δεν υπήρχε διαφορά στην ταχύτητα στην οποία κάποιος έμενε
+            αναίσθητος! Ενώ ο μέσος χρόνος συμπίεσης των καρωτίδων αρτηριών σε
+            αυτό το βαθμό ώστε να προκύψει απώλεια των αισθήσεων ήταν 9 με 10
+            δευτερόλεπτα.
+          </p>
+
+          <p class="text-xs text-black py-5 italic">
+            <span class="font-bold">References: </span> Mitchell JR, Roach DR,
+            et al. Mechanism of loss of consciousness during vascular neck
+            restraint. J Appl Physiol. 2012 Feb;112(3):396-402.
+          </p>
+        </div>
+        <span *ngIf="!expanded1">...</span>
+        <span
+          class="text-sm text-accent font-gothamLight underline"
+          (click)="toggle1()"
+          >{{ expanded1 ? "Διάβασε λιγότερα" : "Διάβασε περσισσότερα" }}</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="bg-white article rounded-lg flex flex-col overflow-hidden"
+      [ngClass]="
+        expanded2
+          ? 'sm:col-span-2 lg:col-span-3 max-h-[2000px] row-start-1'
+          : 'max-h-[650px] max-w-[350px]'
+      "
+    >
+      <div
+        class="w-full flex flex-col justify-center items-center"
+        [ngClass]="{ 'sm:pt-10': expanded2 }"
+      >
+        <img
+          src="../../../../assets/images/blog-article-2.png"
+          class="max-w-[350px] w-full"
+          [ngClass]="{ 'sm:rounded-lg': expanded2 }"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-1 flex-grow items-centertext-center p-3 text-center"
+        [ngClass]="
+          expanded2 ? 'justify-start px-3 sm:px-16 py-10' : 'justify-center'
+        "
+      >
+        <h1 class="font-gothamBlack text-base text-black flex-grow">
+          Ποιοι είναι οι πιο συχνοί τραυματισμοί στο Brazilian <br />Jiu-Jitsu;
+        </h1>
+        <div
+          class="overflow-hidden"
+          [ngClass]="expanded2 ? 'h-auto' : 'h-[100px]'"
+        >
+          <p class="text-black font-gothamLight text-sm">
+            Έχει τύχει πολλές φορές να ακούσεις το bjj να χαρακτηρίζεται ως «the
+            gentle art» είναι όμως τόσο gentle; Οι τραυματισμοί είναι ένα ατυχές
+            και δυσάρεστο μέρος του bjj.
+            <br /><br />Ποιοι είναι όμως οι πιο συχνοί τραυματισμοί στο bjj;
+            <br />
+            Όπως προκύπτει από μία έρευνα που έγινε σε μια διοργάνωση η πιο
+            συχνά τραυματισμένη άρθρωση είναι ο αγκώνας. Ενώ σε ένα άλλο άρθρο
+            που μελέτησε μία άλλη διεθνή διοργάνωση No-gi, η άρθρωση του αγκώνα
+            τραυματιζόταν με την ίδιο συχνότητα με την άρθρωση του γόνατος. Όπως
+            όλοι φαντάζεστε η πιο συχνή αιτία τραυματισμού ήταν τα armbar η
+            δεύτερη πιο συχνή αιτία για τον αγκώνα ήταν η πτώση πάνω σε
+            τεντωμένο χέρι μετά από ρίψη.
+            <br /><br />
+            Η συμβουλή είναι γνωστή κάνε έγκαιρα Tap.
+            <br />
+            Μία ακόμη εξαιρετικά χρήσιμη συμβουλή είναι να προπονείσαι επαρκώς
+            στις ρίψεις. Aκόμα και αν δεν παίζεις συχνά όρθιο πιθανόν σε έναν
+            αγώνα να δεχθείς μία ρίψη και εκεί θα πρέπει να ξέρεις πώς να
+            πέφτεις καθώς αν δεν το κάνεις είναι πολύ πιθανό να τραυματιστείς
+            σοβαρά.
+          </p>
+
+          <p class="text-xs text-black py-5 italic">
+            <span class="font-bold">References: </span> Kreiswirth, Ethan. Myer,
+            Gregory. Rauh, Mitchell. Incidence of Injury among male Brazilian
+            Jiujitsu Fighters at the World Jiu-Jitsu No-GI championship 2009.
+            Journal of Athletic Training. 2014, 49 (1): 89-94 Scoggin et Al..
+            Assessment of Injuries During Brazilian Jiu-Jitsu Competition. The
+            Orthopaedic Journal of Sports Medicine. 2014. 2(2):1-7
+          </p>
+        </div>
+        <span *ngIf="!expanded2">...</span>
+        <span
+          class="text-sm text-accent font-gothamLight underline"
+          (click)="toggle2()"
+          >{{ expanded2 ? "Διάβασε λιγότερα" : "Διάβασε περσισσότερα" }}</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="bg-white article rounded-lg flex flex-col overflow-hidden"
+      [ngClass]="
+        expanded3
+          ? 'sm:col-span-2 lg:col-span-3 max-h-[2000px] row-start-1'
+          : 'max-h-[650px] max-w-[350px]'
+      "
+    >
+      <div
+        class="w-full flex flex-col justify-center items-center"
+        [ngClass]="{ 'sm:pt-10': expanded3 }"
+      >
+        <img
+          src="../../../../assets/images/blog-article-3.png"
+          class="max-w-[350px] w-full"
+          [ngClass]="{ 'sm:rounded-lg': expanded3 }"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-1 flex-grow items-centertext-center p-3 text-center"
+        [ngClass]="
+          expanded3 ? 'justify-start px-3 sm:px-16 py-10' : 'justify-center'
+        "
+      >
+        <h1 class="font-gothamBlack text-base text-black flex-grow">
+          Η σημασία του gripping στα αθλήματα με κιμονό
+        </h1>
+        <div
+          class="overflow-hidden"
+          [ngClass]="expanded3 ? 'h-auto' : 'h-[100px]'"
+        >
+          <p class="text-black font-gothamLight text-sm">
+            Σε όλα τα παλαιστικά αθλήματα αυτός ο οποίος μπορεί να έχει ελέγχει
+            τον αντίπαλο του αποκτά σημαντικό πλεονέκτημα απέναντι του. Τα
+            παλαιστικά αθλήματα που περιλαμβάνουν κιμονό συχνά περιλαμβάνουν
+            gripping σε μεγάλη ένταση και διάρκεια.
+            <br /><br />Σε μία έρευνα αποδείχθηκε ότι οι μύες του πήχη και των
+            δακτύλων ήταν οι δύο κυριότερες μυϊκές ομάδες οι οποίες εμφάνισαν
+            μυϊκή κόπωση μετά από έναν αγώνα bjj σε σχέση με όλες τις άλλες
+            μυϊκές ομάδες. Οι ερευνητές επίσης παρατήρησαν ότι στο τέλος ενός
+            δεκάλεπτου αγώνα η μέγιστη δύναμη σύλληψης μειώθηκε κατά 89% .Η
+            μείωση της μέγιστης δύναμης παρατηρήθηκε από το 4ο λεπτό του αγώνα
+            και παρέμεινε σημαντικά χαμηλά σε σχέση με την αρχική μέτρηση μέχρι
+            το τέλος του παιχνιδιού. <br /><br />
+            Φυσικά η δύναμή του gripping και η αντοχή του δεν είναι ο μόνος
+            παράγοντας που είναι απαραίτητος για την επιτυχία αλλά σίγουρα δεν
+            πρέπει να παραβλέπεται!
+          </p>
+
+          <p class="text-xs text-black py-5 italic">
+            <span class="font-bold">References: </span> Diaz-Lara, F.J. et al.
+            (2015) ‘Analysis of physiological determinants during an
+            international Brazilian Jiu-Jitsu Competition’, International
+            Journal of Performance Analysis in Sport, 15(2), pp. 489–500.
+            doi:10.1080/24748668.2015.11868808.
+          </p>
+        </div>
+        <span *ngIf="!expanded3">...</span>
+        <span
+          class="text-sm text-accent font-gothamLight underline"
+          (click)="toggle3()"
+          >{{ expanded3 ? "Διάβασε λιγότερα" : "Διάβασε περσισσότερα" }}</span
+        >
+      </div>
+    </div>
+  </div>
 </div>
