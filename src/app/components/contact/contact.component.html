@@ -45,17 +45,58 @@
   <h1 class="font-gothamBlack italic text-base">
     Στείλε μου προσωπικό μήνυμα στο email.
   </h1>
-  <div class="flex flex-col gap-3 w-full">
+  <form
+    class="contact-form"
+    #contactForm="ngForm"
+    (ngSubmit)="sendEmail($event, contactForm)"
+    class="flex flex-col gap-3 w-full"
+  >
     <div class="flex flex-row justify-evenly gap-3 w-full">
-      <input placeholder="Ονομα*" class="p-3 rounded-md w-[50%]" />
-      <input placeholder="Email*" class="p-3 rounded-md w-[50%]" />
+      <input
+        type="text"
+        name="user_name"
+        placeholder="Ονομα*"
+        class="p-3 rounded-md w-[50%]"
+        [(ngModel)]="user_name"
+        (ngModelChange)="onInputChange()"
+      />
+      <input
+        type="email"
+        name="user_email"
+        placeholder="Email*"
+        class="p-3 rounded-md w-[50%]"
+        [(ngModel)]="user_email"
+        (ngModelChange)="onInputChange()"
+      />
     </div>
-    <textarea placeholder="Μήνυμα*" class="p-3 rounded-md"></textarea>
+    <textarea
+      name="message"
+      placeholder="Μήνυμα*"
+      class="p-3 rounded-md"
+      [(ngModel)]="message"
+      (ngModelChange)="onInputChange()"
+    ></textarea>
     <h1 class="font-gothamBlack italic text-base text-end">
       <a href="mailto:rehabfighters@gmail.com">{{
         "rehabfighters@gmail.com"
       }}</a>
     </h1>
-    <button class="p-3 bg-accent text-white rounded-md">Αποστολή</button>
-  </div>
+    <h1
+      class="font-gothamBlack text-base text-start"
+      [ngStyle]="{
+        'text-green-500': informativeMessage === 'success',
+        'text-red-500': informativeMessage === 'error'
+      }"
+      *ngIf="informativeMessage !== ''"
+    >
+      {{ informativeMessage }}
+    </h1>
+    <button
+      type="submit"
+      class="p-3 bg-accent text-white rounded-md flex justify-center items-center gap-3"
+    >
+      Αποστολή
+      <app-loader *ngIf="emailLoading"></app-loader>
+    </button>
+  </form>
 </div>
